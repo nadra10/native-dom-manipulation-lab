@@ -17,13 +17,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
   // Do all of your work inside the document.addEventListener  
 
   // Part 1
-
+  document.querySelector('#main-title').textContent = "DOM's Portfolio";
 
   // Part 2
+  document.body.style.backgroundColor = "#FAE4D3";
 
 
   // Part 3
-
+  const favoriteThingsList = document.querySelector('#favorite-things');
+  const lastListItem = favoriteThingsList.lastElementChild;
+  favoriteThingsList.removeChild(lastListItem);
+  
 
   // Part 4
 
