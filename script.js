@@ -24,19 +24,49 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 
   // Part 3
-  const favoriteThingsList = document.querySelector('#favorite-things');
-  const lastListItem = favoriteThingsList.lastElementChild;
+  let favoriteThingsList = document.querySelector('#favorite-things');
+  let lastListItem = favoriteThingsList.lastElementChild;
   favoriteThingsList.removeChild(lastListItem);
   
 
   // Part 4
 
+// let newFontSize = document.querySelectorAll('.special-title');
+// newFontSize.style.fontSize = "2em";
+
+// document.querySelectorAll('.special-title').style.fontSize = "2em";
+
+let fSize = document.querySelectorAll('.special-title');
+console.log(fSize);
+for (let i = 0; i < fSize.length; i++){
+  fSize[i].style.fontSize = "2em";
+}
+
+
 
   // Part 5
+  let nList = document.querySelector('#past-races').children
+  console.log(nList)
+  for (var i = 0; i < nList.length; i++) {
+
+    if (nList[i].innerHTML === "Chicago") {
+      nList[i].remove();
+
+    }
+  }
+
+
+
+
+
 
 
   // Part 6
 
+  let newList = document.createElement("li");
+  let newCity = document.createTextNode("Boston");
+  newList.appendChild(newCity);
+  document.querySelector('#past-races').appendChild(newList);
 
   // Part 7
 
