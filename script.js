@@ -69,13 +69,40 @@ for (let i = 0; i < fSize.length; i++){
   document.querySelector('#past-races').appendChild(newList);
 
   // Part 7
-
+let newDiv = document.createElement('div');
+newDiv.className = 'blog-post';
+let newHeader = document.createElement('h2');
+newHeader.innerHTML = 'New City';
+let newP = document.createElement('p');
+newP.innerText = 'This is my new paragraph';
+newDiv.append(newHeader);
+newDiv.append(newP);
+console.log(newDiv);
 
   // Part 8
 
+ let quoteTitle = document.querySelector('#quote-title');
+ quoteTitle.addEventListener('click',(event) => {
+  randomQuote();
+ });
 
   // Part 9
 
+let blogs = document.querySelectorAll('.blog-post');
+console.log(blogs.length);
+blogs.forEach((blog) => {
+  blog.addEventListener('mouseenter',(event) => {
+    console.log("mouse enter")
+    blog.classList.remove('purple')
+    blog.classList.add('red')
+  });
+
+  blog.addEventListener('mouseout',(event) => {
+    console.log('mouse out')
+    blog.classList.remove('red')
+    blog.classList.add('purple')
+  });
+});
 
 
 
